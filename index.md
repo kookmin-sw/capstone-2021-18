@@ -1,5 +1,5 @@
-## 객체중심 보안관제 오탐제거
-
+## **O24Sec** (Object Oriented Clustering for Security Monitoring)
+## **O2Sec** (Object Oriented Clustering in Network Security)
 ### 🔶 I. 프로젝트 소개
 #### 🔸 산학 협력
 🔹 **기업** : **㈜ 윈스®**
