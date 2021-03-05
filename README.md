@@ -1,4 +1,5 @@
 ## **O24Sec** (Object-Oriented Clustering for Security Monitoring)
+https://kookmin-sw.github.io/capstone-2021-18/
 ## **O2Sec** (Object-Oriented Clustering in Network Security)
 ### 🔶 I. 프로젝트 소개
 #### 🔸 산학 협력
