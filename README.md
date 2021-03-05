@@ -49,7 +49,7 @@ mkyoon@kookmin.ac.kr
 ## 팀명 : "멜러리를 찾아서"  
 ## 팀원 소개
    
-대충 우혁 사진
+<img align="left" width="165" height="165" src="./image/bus.png"></img>
 ```
 
 장우혁 (Project Leader)
@@ -60,7 +60,7 @@ Role :
 
 ```
 
-대충 민송 사진
+<img align="left" width="165" height="165" src="./image/min.jpeg"></img>
 ```
 
 김민송 
