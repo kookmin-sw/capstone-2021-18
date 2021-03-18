@@ -24,7 +24,6 @@ class Check_enc():
         wl = ("140301", "140302", "140303", "160301", "160302", "160303")
 
         payload = self.get_app(ful_payload)
-        print(self.stat['MEAN'][150])
         length = int(len(payload)/2)
         if length <= 3:
             return False
