@@ -66,5 +66,5 @@ if __name__ == "__main__":
           f"Can't separate server-client:       %-8d/{count_all_event}\n" % count_result[5],
           f"ICMP:                               %-8d/{count_all_event}\n" % count_result[6],
            "------------------------------------------------------\n",
-          f"plain events:                       %-8d/{count_normal_event}\n" % count_result[7],
-          f"encrypted events:                   %-8d/{count_normal_event}" % count_result[8])
+          f"Plain events:                       %-8d/{count_normal_event}\n" % count_result[7],
+          f"Encrypted events:                   %-8d/{count_normal_event}" % count_result[8])
