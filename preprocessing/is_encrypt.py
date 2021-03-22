@@ -4,22 +4,26 @@ import math
 import numpy as np
 import secrets
 import payload_parser
-LOOP = 1000
-threshold = 4
+import os
+import pandas as pd
+LOOP = 10000
+threshold = 6
 
 
-class Check_enc():
-    def __init__(self):
-        self.stat = {'MEAN': [], 'STD': []}
-        for i in tqdm(range(1601)):
-            entropy_list = []
-            for n in range(LOOP):
-                entropy_one = self.get_entropy(secrets.token_bytes(i))
-                entropy_list.append(entropy_one)
-            self.stat['MEAN'].append(sum(entropy_list) / LOOP)
-            self.stat['STD'].append(np.std(entropy_list))
+class is_encrypt():
+    def __init__(self, path):
+        if "std_dict.pickle" not in os.listdir(r"."):
+            self.std(LOOP)
+        self.stat = pd.read_pickle("std_dict.pickle")
 
-    def separation(self, ful_payload):
+        dir_save_path = {"plain": rf"{path}\plain",
+                         "encrypt": rf"{path}\encrypt"}
+
+        for key in dir_save_path.keys():
+            if not os.path.exists(dir_save_path[key]):
+                os.makedirs(dir_save_path[key])
+
+    def is_encrypt(self, ful_payload):
         exc = ("170303", "170302", "170301", "150301", "150302", "150303")
         wl = ("140301", "140302", "140303", "160301", "160302", "160303")
 
@@ -54,3 +58,14 @@ class Check_enc():
             return payload[83:]
         elif payload[46:48] == "01":
             return payload
+
+    def std(self, LOOP):
+        stat = {'MEAN': [], 'STD': []}
+        for i in tqdm(range(1601)):
+            entropy_list = []
+            for n in range(LOOP):
+                entropy_one = self.get_entropy(secrets.token_bytes(i))
+                entropy_list.append(entropy_one)
+            stat['MEAN'].append(sum(entropy_list) / LOOP)
+            stat['STD'].append(np.std(entropy_list))
+        pd.to_pickle(stat, "std_dict.pickle")
