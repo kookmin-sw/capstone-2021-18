@@ -10,7 +10,7 @@ LOOP = 10000
 threshold = 6
 
 
-class is_encrypt():
+class Is_encrypt():
     def __init__(self, path):
         if "std_dict.pickle" not in os.listdir(r"."):
             self.std(LOOP)
