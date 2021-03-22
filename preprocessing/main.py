@@ -3,7 +3,7 @@ from separate import separate
 import os
 import pickle
 from tqdm import tqdm
-from is_encrypt import is_encrypt
+from is_encrypt import Is_encrypt
 import sys
 
 def ip_16_32_count(file_name):
@@ -46,8 +46,8 @@ if __name__ == "__main__":
     save_path = sys.argv[2] # result dataset will be saved directory path
     file_name = os.listdir(data_path) # IPS event filenames from 'data_path'
 
-    # Generate data required for encryption determination
-    encrypt = is_encrypt(save_path)
+    # Create Is_encrypt Class object -> Generate data required for encryption determination
+    encrypt = Is_encrypt(save_path)
 
     # Generate data required for separate inner-outer, server-client
     stat_dict = ip_16_32_count(file_name)
