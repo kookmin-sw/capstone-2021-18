@@ -5,5 +5,5 @@
 ### 👇 Follow this exe video 👇
 
 
-![](https://github.com/kookmin-sw/capstone-2021-18/tree/master/imageexecute_preprocessing.gif "Logo Title Text 1")
-![](https://github.com/spectator05/capstone-2021-18/blob/master/image/execute_preprocessing.gif  "Logo Title Text 1")
+![](https://github.com/kookmin-sw/capstone-2021-18/tree/master/video_preprocessing.gif "Logo Title Text 1")
+![](https://github.com/spectator05/capstone-2021-18/blob/master/image/video_preprocessing.gif  "Logo Title Text 1")
