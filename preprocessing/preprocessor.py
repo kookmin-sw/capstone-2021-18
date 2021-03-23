@@ -1,7 +1,5 @@
 from payload_parser import bytes_to_int, to_byte, bytes_to_ip
 import ipaddress
-import pickle
-from tqdm import tqdm
 import os
 
 def update(d, sip, sport, dip, dport):
@@ -47,15 +45,13 @@ def parse_ip_port(p):
     elif protocol == 17:
         p_type = 'UDP'
     else:
-        flag = 0
-    if flag:
-        sip = bytes_to_ip(to_byte(payload[52:60]))
-        dip = bytes_to_ip(to_byte(payload[60:68]))
-        sport = bytes_to_int(to_byte(payload[68:72]))
-        dport = bytes_to_int(to_byte(payload[72:76]))
-        protocol = bytes_to_int(to_byte(payload[46:48]))
-        return sip, dip, sport, dport
-    return -1
+        return -1
+    sip = bytes_to_ip(to_byte(payload[52:60]))
+    dip = bytes_to_ip(to_byte(payload[60:68]))
+    sport = bytes_to_int(to_byte(payload[68:72]))
+    dport = bytes_to_int(to_byte(payload[72:76]))
+    protocol = bytes_to_int(to_byte(payload[46:48]))
+    return sip, dip, sport, dport
 
 def preprocess(p, d):
     parsed = parse_ip_port(p)
