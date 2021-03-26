@@ -70,6 +70,7 @@ class IsEncrypt():
 
         payload = self.get_app(ful_payload)
         length = int(len(payload)/2)
+        # less than 3 is treated as plain text.
         if length <= 3:
             return False
         elif payload[:6] in bl:
