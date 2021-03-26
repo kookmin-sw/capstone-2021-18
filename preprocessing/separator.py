@@ -1,25 +1,23 @@
 import ipaddress
 
-def find_server(d, sip, dip, sport, dport):
+def __find_server(d, sip, dip, sport, dport):
     if sport <= 1024 and dport > 1024:
         return 1
     elif sport > 1024 and dport <= 1024:
         return -1
     server = 0
-    if d['ip'][sip][sport]>d['ip'][dip][dport]:
+    sport_count = d['ip'][sip][sport]
+    dport_count = d['ip'][dip][dport]
+    if sport_count > dport_count:
         server += 1
-    elif d['ip'][sip][sport]<d['ip'][dip][dport]:
+    elif sport_count < dport_count:
         server -= 1
-    if len(d['ip'][sip])>len(d['ip'][dip]):
+    if len(d['ip'][sip]) > len(d['ip'][dip]):
         server -= 1
-    elif len(d['ip'][sip])<len(d['ip'][dip]):
+    elif len(d['ip'][sip]) < len(d['ip'][dip]):
         server += 1
-    if (d['ip'][sip][sport]/sum(d['ip'][sip].values()) >
-				d['ip'][dip][dport]/sum(d['ip'][dip].values())):
-        server += 1
-    elif (d['ip'][sip][sport]/sum(d['ip'][sip].values()) <
-					d['ip'][dip][dport]/sum(d['ip'][dip].values())):
-        server -= 1
+    temp = sport_count / sum(d['ip'][sip].values()) - dport_count / sum(d['ip'][dip].values())
+    server += temp//abs(temp)
     return server
 
 def separate(parsed, d):
@@ -31,22 +29,22 @@ def separate(parsed, d):
         dn_oppo_card = len(d['network'][dn])
         # if source is inner
         if sn_oppo_card >= 18 and dn_oppo_card < 18:
-            s_is_server = find_server(d, sip, dip, sport, dport)
+            s_is_server = __find_server(d, sip, dip, sport, dport)
             # if source is server
-            if s_is_server:
+            if s_is_server > 0:
                 return 0
-            elif not s_is_server:
+            elif s_is_server < 0:
                 return 1
             # can't separate server : client
             else:
                 return 4
         # if source is outer
         elif sn_oppo_card < 18 and dn_oppo_card >= 18:
-            s_is_server = find_server(d, sip, dip, sport, dport)
+            s_is_server = __find_server(d, sip, dip, sport, dport)
             # if source is server
-            if s_is_server:
+            if s_is_server > 0:
                 return 2
-            elif not s_is_server:
+            elif s_is_server < 0:
                 return 3
             # can't separate server : client
             else:
