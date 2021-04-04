@@ -53,26 +53,21 @@ mkyoon@kookmin.ac.kr
    
 ## 팀명 : "멜러리를 찾아서"  
 ## 팀원 소개
-   
+
+#### 장우혁
 <img align="left" width="165" height="165" src="./image/Jang.png"></img>
-```
-
-장우혁 (Project Leader)
-
-Student ID : 2017
+~~~
+[@spectator05](https://www.github.com/spectator05)
 E-Mail : spector@kookmin.ac.kr
+~~~
 
-```
-
+#### 김민송
 <img align="left" width="165" height="165" src="./image/Kim.png"></img>
-```
+~~~
+[@MinSong1227](https://github.com/MinSong1227)
+E-Mail : alsthd14@kookmin.ac.kr  
+~~~
 
-김민송 
-
-Student ID : 20152877
-E-Mail : alsthd14@kookmin.ac.kr
-
-```
 ### 🔶 IV. 사용법
 
 ### 🔶 V. 기타
