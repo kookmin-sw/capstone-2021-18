@@ -54,11 +54,11 @@ mkyoon@kookmin.ac.kr
 ## 팀명 : "멜러리를 찾아서"  
 ## 팀원 소개
 
-#### 장우혁
+#### 장우혁([@spectator05](https://www.github.com/spectator05))
 <img align="left" width="165" height="165" src="./image/Jang.png"></img>
 
-[@spectator05](https://www.github.com/spectator05)
 ```
+
 
 Role :
 E-Mail : spector@kookmin.ac.kr
@@ -66,11 +66,11 @@ E-Mail : spector@kookmin.ac.kr
 
 ```
 
-#### 김민송
+#### 김민송([@MinSong1227](https://github.com/MinSong1227))
 <img align="left" width="165" height="165" src="./image/Kim.png"></img>
 
-[@MinSong1227](https://github.com/MinSong1227)
 ```
+
 
 Role :
 E-Mail : alsthd14@kookmin.ac.kr  
