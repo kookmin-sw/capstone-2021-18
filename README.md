@@ -19,7 +19,7 @@ https://kookmin-sw.github.io/capstone-2021-18/
       - **부정확한 라벨 한계 극복**    
 
    
-## 🔹 팀 "멜리러를 찾아서"의 제안기술 : **객체 중심의 보안관제로그 오탐제거**   
+## 🔹 팀 "멜를 찾아서"의 제안기술 : **객체 중심의 보안관제로그 오탐제거**   
   1. 암호화/비암호화 데이터 구별
   2. 보호대상의 객체 식별(클라이언트/서버, 내부장비/외부대상)
   3. 객체 중심의 오탐 제거   
@@ -54,25 +54,23 @@ mkyoon@kookmin.ac.kr
 ## 팀명 : "멜러리를 찾아서"  
 ## 팀원 소개
    
-<img align="left" width="165" height="165" src="./image/bus.png"></img>
+<img align="left" width="165" height="165" src="./image/Jang.png"></img>
 ```
 
 장우혁 (Project Leader)
 
 Student ID : 2017
 E-Mail : spector@kookmin.ac.kr
-Role : 
 
 ```
 
-<img align="left" width="165" height="165" src="./image/min.jpeg"></img>
+<img align="left" width="165" height="165" src="./image/Kim.jpeg"></img>
 ```
 
 김민송 
 
 Student ID : 20152877
 E-Mail : alsthd14@kookmin.ac.kr
-Role : 
 
 ```
 ### 🔶 IV. 사용법
