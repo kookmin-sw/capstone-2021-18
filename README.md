@@ -56,17 +56,27 @@ mkyoon@kookmin.ac.kr
 
 #### 장우혁
 <img align="left" width="165" height="165" src="./image/Jang.png"></img>
-~~~
+
 [@spectator05](https://www.github.com/spectator05)
+```
+
+Role :
 E-Mail : spector@kookmin.ac.kr
-~~~
+
+
+```
 
 #### 김민송
 <img align="left" width="165" height="165" src="./image/Kim.png"></img>
-~~~
+
 [@MinSong1227](https://github.com/MinSong1227)
+```
+
+Role :
 E-Mail : alsthd14@kookmin.ac.kr  
-~~~
+
+
+```
 
 ### 🔶 IV. 사용법
 
