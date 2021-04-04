@@ -64,7 +64,7 @@ E-Mail : spector@kookmin.ac.kr
 
 ```
 
-<img align="left" width="165" height="165" src="./image/Kim.jpeg"></img>
+<img align="left" width="165" height="165" src="./image/Kim.png"></img>
 ```
 
 김민송 
