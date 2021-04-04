@@ -28,15 +28,15 @@
    
 윈스의 보안관제제품 SNIPER BD1에서는 24시간 공격에 대응할 수 있는 실시간 모니터링, 위협 감시, 데이터 수집, 분석 보고서 등 빠르게 침해사고에 대응할 수 있는 통합보안관제시스템을 제공해 주고 있다. 하지만 소수의 보안관제 인력, 정보화 시대에 따른 방대한 양의 네트워크 트래픽 등의 제한사항에 윈스는 AI보안을 통해 보안관제에 효율성을 높히고 있다. 하지만 AI보안 모델 생성시 기존의 라벨링 되어 있는 학습데이터가 부정확하거나 일관성이 없을 경우 만들어진 보안 모델의 정확도는 떨어질 수 밖에 없다. **즉, 같은 모델이라도 학습되는 데이터가 일관적이고 정확도가 높다면 모델의 성능은 비약적으로 올라갈 수 있기때문에 우리는 이 학습데이터에서 객체 중심의 분석을 통해 잘못된 라벨링을 찾아 교정하여 더 좋은 성능의 모델을 만들고자 한다.**   
 
-### Abstract   
+## 🔶 II. Abstract   
    
 Wins' security monitoring product, SNIPER BD1 provides an integrated security control system. However, due to limitations such as a small number of security monitoring person and a huge amount of network traffic due to the information society, Wins is increasing the efficiency of security control through AI security. However, when the AI security model is created, if the existing labeled training data is inaccurate or inconsistent, the accuracy of the created security model will inevitably decrease. In other words, even with the same model, if the trained data is consistent and accurate, the performance of the model can increase drastically. Therefore, we want to make a better model by finding and correcting incorrect labeling through object-oriented clustering in this training data.
 
-## 🔶 II. 소개 영상
+## 🔶 III. 소개 영상
 youtube   
    
    
-## 🔶 III. 팀 소개
+## 🔶 IV. 팀 소개
 
 ### 🔹 지도 교수님
 <img align="left" width="15%" height="10%" src="https://wfile.kookmin.ac.kr/data/www/profile/2010/05/5c5e79ff50d88e225749756b6403b56d.gif"></img>
@@ -78,7 +78,7 @@ E-Mail : alsthd14@kookmin.ac.kr
 ```
    
    
-## 🔶 IV. 사용법
+## 🔶 V. 사용법
 
-## 🔶 V. 기타
+## 🔶 VI. 기타
 
