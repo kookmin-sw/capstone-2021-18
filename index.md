@@ -54,7 +54,7 @@ mkyoon@kookmin.ac.kr
 
 #### 장우혁 ([@spectator05](https://www.github.com/spectator05))
 
-<img src="./image/Jang.png">  
+<img src="./image/Jang.png"  width="20%">  
 
 ~~~
    
@@ -69,7 +69,7 @@ E-Mail : spector@kookmin.ac.kr
    
 #### 김민송 ([@MinSong1227](https://github.com/MinSong1227))
 
-<img src="./image/Kim.png">
+<img src="./image/Kim.png"  width="20%">
 
 ~~~
    
