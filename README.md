@@ -55,12 +55,13 @@ mkyoon@kookmin.ac.kr
 <img align="left" width="165" height="165" src="./image/Jang.png"></img>
 
 ```
+   
 Role : 팀장
        (정) 보호대상 객체식별 기술 개발   
        (부) 암호-비암호 구별 기술 개발   
        (공통) 객체 별 유사도 실험, 클러스터링 기법 실험   
 E-Mail : spector@kookmin.ac.kr   
-
+   
 ```
    
    
@@ -69,11 +70,13 @@ E-Mail : spector@kookmin.ac.kr
 <img align="left" width="165" height="165" src="./image/Kim.png"></img>
 
 ```
-Role : (정) 암호-비암호 구별 기술 개발   
+   
+Role : 팀원
+       (정) 암호-비암호 구별 기술 개발   
        (부) 보호대상 객체식별 기술 개발   
        (공통) 객체 별 유사도 실험, 클러스터링 기법 실험   
 E-Mail : alsthd14@kookmin.ac.kr   
-
+   
 ```
    
    
@@ -81,7 +84,7 @@ E-Mail : alsthd14@kookmin.ac.kr
 ### /object_separating   
 `$ python main.py <data_path> <save_path>`
 
-### return : 
+#### return : 
 - <save_path>/encrypt/ : encryption events with category(0 ~ 3 : inner-outer, server-client)
 - <save_path>/plain/ : unencryption events with category(0 ~ 3 : inner-outer, server-client) 
 
