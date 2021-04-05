@@ -32,7 +32,6 @@
 Wins' security monitoring product, SNIPER BD1 provides an integrated security control system. However, due to limitations such as a small number of security monitoring person and a huge amount of network traffic due to the information society, Wins is increasing the efficiency of security control through AI security. However, when the AI security model is created, if the existing labeled training data is inaccurate or inconsistent, the accuracy of the created security model will inevitably decrease. In other words, even with the same model, if the trained data is consistent and accurate, the performance of the model can increase drastically. Therefore, we want to make a better model by finding and correcting incorrect labeling through object-oriented clustering in this training data.
 
 ### 🔶 II. 소개 영상
-<준비중>
    
    
 ### 🔶 III. 팀 소개
