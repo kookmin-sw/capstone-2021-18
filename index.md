@@ -2,7 +2,7 @@
 # **O24Sec** (Object-Oriented Clustering for Security Monitoring)
 ## 🔶 I. 프로젝트 소개
 ### 🔹 **산학 협력 기업** :   
-## [㈜윈스](http://www.wins21.co.kr/company/company_020100.html) 
+### [㈜윈스](http://www.wins21.co.kr/company/company_020100.html) 
 <img src="./image/wins_logo.gif">  
    
 #### "세계적으로 인정받은 기술력을 가진 국가대표 정보보호기업"   
