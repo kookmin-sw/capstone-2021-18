@@ -39,13 +39,11 @@ Wins' security monitoring product, SNIPER BD1 provides an integrated security co
    
 ### 🔹 지도 교수님
 
-<img src="https://wfile.kookmin.ac.kr/data/www/profile/2010/05/5c5e79ff50d88e225749756b6403b56d.gif">
+<img src="https://wfile.kookmin.ac.kr/data/www/profile/2010/05/5c5e79ff50d88e225749756b6403b56d.gif" width="20%">
 ~~~
 윤명근 교수님
-
 캡스톤 디자인 프로젝트 지도교수님
 프로젝트 검수
-
 mkyoon@kookmin.ac.kr
 ~~~
    
