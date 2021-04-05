@@ -33,7 +33,7 @@
 Wins' security monitoring product, SNIPER BD1 provides an integrated security control system. However, due to limitations such as a small number of security monitoring person and a huge amount of network traffic due to the information society, Wins is increasing the efficiency of security control through AI security. However, when the AI security model is created, if the existing labeled training data is inaccurate or inconsistent, the accuracy of the created security model will inevitably decrease. In other words, even with the same model, if the trained data is consistent and accurate, the performance of the model can increase drastically. Therefore, we want to make a better model by finding and correcting incorrect labeling through object-oriented clustering in this training data.
 
 ## 🔶 III. 소개 영상
-youtube   
+<준비중>  
    
    
 ## 🔶 IV. 팀 소개
@@ -55,12 +55,13 @@ mkyoon@kookmin.ac.kr
 <img align="left" width="165" height="165" src="./image/Jang.png"></img>
 
 ```
-
-
-Role :
-E-Mail : spector@kookmin.ac.kr
-
-
+   
+Role : 팀장
+       (정) 보호대상 객체식별 기술 개발   
+       (부) 암호-비암호 구별 기술 개발   
+       (공통) 객체 별 유사도 실험, 클러스터링 기법 실험   
+E-Mail : spector@kookmin.ac.kr   
+   
 ```
    
    
@@ -69,16 +70,26 @@ E-Mail : spector@kookmin.ac.kr
 <img align="left" width="165" height="165" src="./image/Kim.png"></img>
 
 ```
-
-
-Role :
-E-Mail : alsthd14@kookmin.ac.kr  
-
-
+   
+Role : 팀원
+       (정) 암호-비암호 구별 기술 개발   
+       (부) 보호대상 객체식별 기술 개발   
+       (공통) 객체 별 유사도 실험, 클러스터링 기법 실험   
+E-Mail : alsthd14@kookmin.ac.kr   
+   
 ```
    
    
-## 🔶 V. 사용법
+## 🔶 V. 사용법   
+### /object_separating   
+`$ python main.py <data_path> <save_path>`
+
+#### return : 
+- <save_path>/encrypt/ : encryption events with category(0 ~ 3 : inner-outer, server-client)
+- <save_path>/plain/ : unencryption events with category(0 ~ 3 : inner-outer, server-client) 
+
+### /clustering
+`preparing`
 
 ## 🔶 VI. 기타
 
