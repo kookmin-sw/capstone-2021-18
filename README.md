@@ -56,8 +56,7 @@ mkyoon@kookmin.ac.kr
 
 ```
    
-Role : 팀장
-       (정) 보호대상 객체식별 기술 개발   
+Role : (정) 보호대상 객체식별 기술 개발   
        (부) 암호-비암호 구별 기술 개발   
        (공통) 객체 별 유사도 실험, 클러스터링 기법 실험   
 E-Mail : spector@kookmin.ac.kr   
@@ -71,8 +70,7 @@ E-Mail : spector@kookmin.ac.kr
 
 ```
    
-Role : 팀원
-       (정) 암호-비암호 구별 기술 개발   
+Role : (정) 암호-비암호 구별 기술 개발   
        (부) 보호대상 객체식별 기술 개발   
        (공통) 객체 별 유사도 실험, 클러스터링 기법 실험   
 E-Mail : alsthd14@kookmin.ac.kr   
