@@ -5,7 +5,7 @@ https://kookmin-sw.github.io/capstone-2021-18/
 ### 🔶 I. 프로젝트 소개
 #### 🔸 산학 협력
 🔹 **기업** :   
-<img align="left" width="180" height="60" src="./image/wins_logo.gif" href = "http://www.wins21.co.kr/company/company_020100.html"/>
+<img align="left" width="180" height="60" src="./image/wins_logo.gif" href = "http://www.wins21.co.kr/company/company_020100.html"></img>
 [㈜윈스](http://www.wins21.co.kr/company/company_020100.html)   
 ---   
 ### "세계적으로 인정받은 기술력을 가진 국가대표 정보보호기업"   
@@ -41,7 +41,7 @@ Wins' security monitoring product, SNIPER BD1 provides an integrated security co
 ### 🔶 III. 팀 소개
    
 ## 지도 교수님
-<img align="left" width="15%" height="10%" src="https://wfile.kookmin.ac.kr/data/www/profile/2010/05/5c5e79ff50d88e225749756b6403b56d.gif"/>
+<img align="left" width="15%" height="10%" src="https://wfile.kookmin.ac.kr/data/www/profile/2010/05/5c5e79ff50d88e225749756b6403b56d.gif"></img>
 ```
 윤명근 교수님
 
@@ -54,7 +54,7 @@ mkyoon@kookmin.ac.kr
 ### 🔹 '멜러리를 찾아서' 팀원 소개
 
 #### 장우혁 ([@spectator05](https://www.github.com/spectator05))
-<img align="left" width="165" height="165" src="./image/Jang.png"/>
+<img align="left" width="165" height="165" src="./image/Jang.png"></img>
 
 ```
    
@@ -68,7 +68,7 @@ E-Mail : spector@kookmin.ac.kr
    
    
 #### 김민송 ([@MinSong1227](https://github.com/MinSong1227))
-<img align="left" width="165" height="165" src="./image/Kim.png"/>
+<img align="left" width="165" height="165" src="./image/Kim.png"></img>
 
 ```
    
