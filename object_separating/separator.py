@@ -23,6 +23,7 @@ def find_server(d, sip, dip, sport, dport):
     return server
 
 def set_threshold(d):
+    global THRESHOLD
     card_len_list = [len(i[1]) for i in d['network'].items()]
     card_len_list.sort(reverse=True)
     
