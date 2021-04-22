@@ -5,7 +5,7 @@ import pickle
 from tqdm import tqdm #pip install tqdm
 
 from preprocessor import preprocess, parse_ip_port
-from separator import separate
+from separator import separate, set_threshold
 from is_encrypt import IsEncrypt
 
 def ip_16_32_count(file_name):
@@ -20,6 +20,7 @@ def ip_16_32_count(file_name):
 def object_separate(stat_dict, file_name):
     # encryption determinating and separating objects by is_encrypt.py, separator.py
     count_result = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    set_threshold(stat_dict)
     for fname in tqdm(file_name, total=len(file_name)):
         with open(rf"{data_path}{os.sep}{fname}", "rb") as file:
             pk = pickle.load(file)
