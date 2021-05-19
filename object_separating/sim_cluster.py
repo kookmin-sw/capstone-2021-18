@@ -9,7 +9,9 @@ from payload_parser import to_byte, get_app
 
 
 def HttpParser(payload):
-    content = {'20', '2F', '3A', '27', '2C','29', '28', '7D', '7B', '2E','5D','5B', '3B', '3E','3C', '2A', '22', '23', '3D'}
+    content = {'20', '2F', '3A', '27', '2C', '29',
+               '28', '7D', '7B', '2E', '5D', '5B',
+               '3B', '3E', '3C', '2A', '22', '23', '3D'}
     # delimiter by special character
     ls = []
     header_body = payload.split('0D0A0D0A')
@@ -21,7 +23,7 @@ def HttpParser(payload):
         for idx in range(0, len(chunk), 2):
             if chunk[idx:idx+2] in content and len(word) > 0:
                 ls.append(word)
-                word =""
+                word = ""
             elif chunk[idx:idx+2] in content and len(word) == 0:
                 pass
             else:
@@ -120,7 +122,7 @@ def make_cluster(DATA_PATH, SAVE_PATH, sim_rate):
     file_list = os.listdir(rf"{DATA_PATH}{os.sep}plain")
     objects = ["IN_S", "IN_C", "OUT_S", "OUT_C"]
     objs = {obj: {} for obj in objects}
-    print("---------- read payload ---------")
+    print("---------- read payload -----------")
     for fname in tqdm(file_list):
         with open(rf"{DATA_PATH}{os.sep}plain{os.sep}{fname}") as f:
             pk_tmp = pickle.load(f)
@@ -128,13 +130,14 @@ def make_cluster(DATA_PATH, SAVE_PATH, sim_rate):
                 objs[objects[pk_tmp[-1]]][pk_tmp[1]] = {"DetectName": pk_tmp[21], "Result": pk_tmp[-3], "Payload": get_app(pk_tmp[-2])}
 
     for obj in objs:
+        print(f"---------- start {obj} -----------")
         get_cluster(objs[obj], SAVE_PATH, sim_rate, obj)
 
 
 if __name__ == '__main__':
 
     sim_rate = 0.90
-    DATA_PATH = r"D:\KISTI\capstone\example\data"
-    SAVE_PATH = r"D:\KISTI\capstone\example\result"
+    DATA_PATH = r"D:\capstone\example\data"
+    SAVE_PATH = r"D:\capstone\example\result"
 
     make_cluster(DATA_PATH, SAVE_PATH, sim_rate)
