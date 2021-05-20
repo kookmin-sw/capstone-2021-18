@@ -1,5 +1,5 @@
 # Returns application payload about each protocols
-def get_app(self, payload):
+def get_app(payload):
     # ethernet length
     length = 27
     # ipv4 length

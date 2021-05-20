@@ -1,5 +1,6 @@
 import os
 import csv
+import sys
 import pickle
 
 import pandas as pd
@@ -45,6 +46,7 @@ def make_result_csv(data, cluster_jac, vec_dict, title_vec, SAVE_PATH, obj):
     wrt_tmp.writerow(
         ['Cluster', 'DetectName', 'Result', '_id', 'Payload', 'label_Purity', 'DetectName_Purity', 'diffrent'])
     etc = []
+    print("making csv...")
     for cls in tqdm(cluster_jac):
         if len(cluster_jac[cls]) <= 1:
             etc.append(cluster_jac[cls][0])
@@ -74,6 +76,7 @@ def make_result_csv(data, cluster_jac, vec_dict, title_vec, SAVE_PATH, obj):
 
 def get_cluster(data, SAVE_PATH, sim_rate, obj):
     vec_dict = {}
+    print("extracting vector...")
     for fn in tqdm(data):
         if len(data[fn]['Payload']) != 0:
             chunks = HttpParser(data[fn]['Payload'])
@@ -83,7 +86,10 @@ def get_cluster(data, SAVE_PATH, sim_rate, obj):
     cluster_jac = {}
     chunks_dict = {}
     idx = 0
+    print("clustering event...")
     for f in tqdm(vec_dict):
+        if len(vec_dict[f]) == 0:
+            passed.add(f)
         if f not in passed:
             passed.add(f)
             cluster_jac[idx] = [f]
@@ -93,6 +99,8 @@ def get_cluster(data, SAVE_PATH, sim_rate, obj):
                     chunks_dict[idx][chunk] = 0
                 chunks_dict[idx][chunk] += 1
             for op in vec_dict:
+                if len(vec_dict[op]) == 0:
+                    passed.add(op)
                 if op not in passed:
                     if jac_sim(vec_dict[f], vec_dict[op]) >= sim_rate:
                         passed.add(op)
@@ -118,26 +126,25 @@ def get_cluster(data, SAVE_PATH, sim_rate, obj):
     make_result_csv(data, cluster_jac, vec_dict, title_vec, SAVE_PATH, obj)
 
 
-def make_cluster(DATA_PATH, SAVE_PATH, sim_rate):
+def make_cluster(DATA_PATH, sim_rate):
     file_list = os.listdir(rf"{DATA_PATH}{os.sep}plain")
     objects = ["IN_S", "IN_C", "OUT_S", "OUT_C"]
     objs = {obj: {} for obj in objects}
     print("---------- read payload -----------")
     for fname in tqdm(file_list):
-        with open(rf"{DATA_PATH}{os.sep}plain{os.sep}{fname}") as f:
+        with open(rf"{DATA_PATH}{os.sep}plain{os.sep}{fname}", 'rb') as f:
             pk_tmp = pickle.load(f)
-            if pk_tmp[-1] <= 3:
+            if pk_tmp[-1] <= 3 and (int(pk_tmp[6]) == 80 or int(pk_tmp[19]) == 80):
                 objs[objects[pk_tmp[-1]]][pk_tmp[1]] = {"DetectName": pk_tmp[21], "Result": pk_tmp[-3], "Payload": get_app(pk_tmp[-2])}
 
     for obj in objs:
         print(f"---------- start {obj} -----------")
-        get_cluster(objs[obj], SAVE_PATH, sim_rate, obj)
+        get_cluster(objs[obj],DATA_PATH, sim_rate, obj)
 
 
 if __name__ == '__main__':
 
     sim_rate = 0.90
-    DATA_PATH = r"D:\capstone\example\data"
-    SAVE_PATH = r"D:\capstone\example\result"
+    DATA_PATH = sys.argv[1]
 
-    make_cluster(DATA_PATH, SAVE_PATH, sim_rate)
+    make_cluster(DATA_PATH, sim_rate)
