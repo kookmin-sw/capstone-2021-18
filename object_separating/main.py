@@ -7,6 +7,8 @@ from tqdm import tqdm #pip install tqdm
 from preprocessor import preprocess, parse_ip_port
 from separator import separate, set_threshold
 from is_encrypt import IsEncrypt
+from sim_cluster import make_cluster
+
 
 def ip_16_32_count(file_name):
     # adding ip count, network(IP/16bit) count to 'stat_dict' by preprocess.py
@@ -16,6 +18,7 @@ def ip_16_32_count(file_name):
                 pk = pickle.load(file)
                 preprocess(pk, stat_dict)
     return stat_dict
+
 
 def object_separate(stat_dict, file_name):
     # encryption determinating and separating objects by is_encrypt.py, separator.py
@@ -46,6 +49,7 @@ def object_separate(stat_dict, file_name):
             count_result[6] += 1
     return count_result
 
+
 if __name__ == "__main__":
     data_path = sys.argv[1] # dataset directory path
     save_path = sys.argv[2] # result dataset will be saved directory path
@@ -73,3 +77,5 @@ if __name__ == "__main__":
            "------------------------------------------------------\n",
           f"Encrypted events:                   {count_result[7]:<8}/{count_normal_event}\n",
           f"Plain events:                       {count_result[8]:<8}/{count_normal_event}")
+
+    make_cluster(save_path, 0.9)

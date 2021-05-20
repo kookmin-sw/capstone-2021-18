@@ -19,7 +19,8 @@ def find_server(d, sip, dip, sport, dport):
     elif len(d['ip'][sip]) < len(d['ip'][dip]):
         server += 1
     temp = sport_count / sum(d['ip'][sip].values()) - dport_count / sum(d['ip'][dip].values())
-    server += temp//abs(temp)
+    if temp != 0:
+        server += temp//abs(temp)
     return server
 
 def set_threshold(d):

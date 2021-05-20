@@ -1,3 +1,20 @@
+# Returns application payload about each protocols
+def get_app(payload):
+    # ethernet length
+    length = 27
+    # ipv4 length
+    length += (int(payload[length + 2], 16)) * 8
+    # tcp
+    if payload[46:48] == "06":
+        length += (int(payload[length + 25], 16)) * 8
+        return payload[length + 1:]
+    # udp
+    elif payload[46:48] == "11":
+        return payload[length + 9:]
+    # icmp
+    elif payload[46:48] == "01":
+        return payload
+
 def to_byte(payload):
     out = []
     for ii in range(0, len(payload), 2):
