@@ -40,23 +40,6 @@ class IsEncrypt():
             entropy -= p_x * math.log(p_x, 2)
         return entropy
 
-    # Returns application payload about each protocols
-    def get_app(self, payload):
-        # ethernet length
-        length = 27
-        # ipv4 length
-        length += (int(payload[length + 2], 16)) * 8
-        # tcp
-        if payload[46:48] == "06":
-            length += (int(payload[length + 25], 16)) * 8
-            return payload[length + 1:]
-        # udp
-        elif payload[46:48] == "11":
-            return payload[length + 9:]
-        # icmp
-        elif payload[46:48] == "01":
-            return payload
-
     # if std_dict is not exist, make std_dict
     def std(self, LOOP):
         stat = {'MEAN': [], 'STD': []}
@@ -76,7 +59,7 @@ class IsEncrypt():
         # whitelist
         wl = ("140301", "140302", "140303", "160301", "160302", "160303")
 
-        payload = self.get_app(ful_payload)
+        payload = payload_parser.get_app(ful_payload)
         length = int(len(payload)/2)
         # less than 3 is treated as plain text.
         if length <= 3:
