@@ -97,15 +97,19 @@ E-Mail : alsthd14@kookmin.ac.kr
 <br/>
    
 ## 🔶 V. 사용법   
-### /object_separating   
+
 `$ python main.py <data_path> <save_path>`
+
+#### input :
+- <data_path>: ips 데이터들(pickle 파일)이 존재하는 폴더 경로
+- <save_path>: 최종 csv결과를 저장할 경로
+
 
 #### return : 
 - <save_path>/encrypt/ : encryption events with category(0 ~ 3 : inner-outer, server-client)
 - <save_path>/plain/ : unencryption events with category(0 ~ 3 : inner-outer, server-client) 
+- <save_path>/{object}_result.csv : The Result of clustered events
 
-### /clustering
-`preparing`
 
 <br/>
 <br/>
