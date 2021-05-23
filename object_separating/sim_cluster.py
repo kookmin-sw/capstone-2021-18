@@ -8,7 +8,7 @@ import pandas as pd
 from tqdm import tqdm
 from payload_parser import to_byte, get_app
 
-
+# payload chunking by special character
 def HttpParser(payload):
     content = {'20', '2F', '3A', '27', '2C', '29',
                '28', '7D', '7B', '2E', '5D', '5B',
@@ -34,10 +34,12 @@ def HttpParser(payload):
     return ls
 
 
+# jaccard similarity
 def jac_sim(a, b):
     return len(a & b) / (len(a) + len(b) - len(a & b))
 
 
+# make csv for clustered result
 def make_result_csv(data, cluster_jac, vec_dict, title_vec, SAVE_PATH, obj):
     pd.to_pickle(title_vec, rf"{SAVE_PATH}\{obj}_title_vector.pickle")
     csv_tmp = open(rf"{SAVE_PATH}\{obj}_cluster.csv", 'w',
@@ -73,7 +75,7 @@ def make_result_csv(data, cluster_jac, vec_dict, title_vec, SAVE_PATH, obj):
         wrt_tmp.writerow(['etc', data[d]['DetectName'], data[d]['Result'], d, str(to_byte(data[d]['Payload']))])
     csv_tmp.close()
 
-
+# get cluster in IPS events
 def get_cluster(data, SAVE_PATH, sim_rate, obj):
     vec_dict = {}
     print("extracting vector...")
@@ -87,17 +89,20 @@ def get_cluster(data, SAVE_PATH, sim_rate, obj):
     chunks_dict = {}
     idx = 0
     print("clustering event...")
+    # clustering
     for f in tqdm(vec_dict):
         if len(vec_dict[f]) == 0:
             passed.add(f)
         if f not in passed:
             passed.add(f)
+            # get one data
             cluster_jac[idx] = [f]
             chunks_dict[idx] = {}
             for chunk in vec_dict[f]:
                 if chunk not in chunks_dict:
                     chunks_dict[idx][chunk] = 0
                 chunks_dict[idx][chunk] += 1
+            # compare other datas with jaccard similarity
             for op in vec_dict:
                 if len(vec_dict[op]) == 0:
                     passed.add(op)
@@ -126,6 +131,7 @@ def get_cluster(data, SAVE_PATH, sim_rate, obj):
     make_result_csv(data, cluster_jac, vec_dict, title_vec, SAVE_PATH, obj)
 
 
+# read data and start clustering about object
 def make_cluster(DATA_PATH, sim_rate):
     file_list = os.listdir(rf"{DATA_PATH}{os.sep}plain")
     objects = ["IN_S", "IN_C", "OUT_S", "OUT_C"]
@@ -142,6 +148,7 @@ def make_cluster(DATA_PATH, sim_rate):
         get_cluster(objs[obj],DATA_PATH, sim_rate, obj)
 
 
+# main
 if __name__ == '__main__':
 
     sim_rate = 0.90
