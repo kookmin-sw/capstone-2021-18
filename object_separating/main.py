@@ -77,5 +77,6 @@ if __name__ == "__main__":
            "------------------------------------------------------\n",
           f"Encrypted events:                   {count_result[7]:<8}/{count_normal_event}\n",
           f"Plain events:                       {count_result[8]:<8}/{count_normal_event}")
-
+   
+    # run clustering code for make cluster in unencrypted each object
     make_cluster(save_path, 0.9)
