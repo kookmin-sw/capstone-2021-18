@@ -16,7 +16,7 @@
  ### ✅ Result CSV(보안상 문제가 될 수 있는 부분은 블러처리 되어 있습니다.)
     
     
- ![](https://github.com/MinSong1227/capstone-2021-18/blob/master/image/result_csv.jpg "Logo Title Text 1")
+ ![](https://github.com/MinSong1227/capstone-2021-18/blob/master/image/csv_result.jpg "Logo Title Text 1")
     
 #### Column:   
  Cluster : Cluster Index   
