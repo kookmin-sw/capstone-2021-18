@@ -45,7 +45,7 @@ Wins' security monitoring product, SNIPER BD1 provides an integrated security co
 <br/>
 
 ## 🔶 III. 소개 영상
-[![Video Label](https://www.youtube.com/watch?v=wjlrIJas8TQ)
+[![Video Label](https://github.com/kookmin-sw/capstone-2021-18/blob/master/image/youtube.png)](https://youtu.be/wjlrIJas8TQ)
    
 <br/>
 <br/>
