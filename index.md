@@ -85,13 +85,13 @@ E-Mail : alsthd14@kookmin.ac.kr
 `$ python main.py <data_path> <save_path>`
 
 #### input :   
-- &lt;data_path&gt; : IPS 데이터들(pickle 파일)이 존재하는 폴더 경로   
-- &lt;save_path&gt; : 최종 csv결과를 저장할 경로   
+- data_path : IPS 데이터들(pickle 파일)이 존재하는 폴더 경로   
+- save_path : 최종 csv결과를 저장할 경로   
    
 #### return : 
-- &lt;save_path&gt;/encrypt/ : encryption events with category(0 ~ 3 : inner-outer, server-client)
-- &lt;save_path&gt;/plain/ : unencryption events with category(0 ~ 3 : inner-outer, server-client) 
-- &lt;save_path&gt;/{object}_result.csv : The Result of clustered events   
+- save_path/encrypt/ : encryption events with category(0 ~ 3 : inner-outer, server-client)
+- save_path/plain/ : unencryption events with category(0 ~ 3 : inner-outer, server-client) 
+- save_path/{object}_result.csv : The Result of clustered events   
 
 <br/>
 <br/>
