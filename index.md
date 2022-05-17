@@ -97,4 +97,4 @@ E-Mail : alsthd14@kookmin.ac.kr
 <br/>
 
 ### 🔶 VI. 기타
-https://github.com/kookmin-sw/capstone-2021-18
+<img align="middle" width="1000" height="1500" src="./image/O24Sec.png"></img>
