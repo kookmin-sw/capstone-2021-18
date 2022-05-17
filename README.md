@@ -116,5 +116,5 @@ E-Mail : alsthd14@kookmin.ac.kr
 
 ## 🔶 VI. 기타
 
-<img align="middle" width="1000" height="1500" src="./image/O24Sec.png"></img>
+<img align="middle" width="1000" height="1400" src="./image/O24Sec.png"></img>
 
